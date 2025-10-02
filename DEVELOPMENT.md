@@ -36,6 +36,13 @@ nvm is a POSIX-compliant shell script project that works across multiple shells.
 
 3. **Install required shells (if not already present)**
    
+   Use the provided helper script for easy installation:
+   ```bash
+   ./install-test-shells.sh
+   ```
+   
+   Or install manually:
+   
    **Ubuntu/Debian:**
    ```bash
    sudo apt-get update
@@ -271,6 +278,34 @@ make TAG=<version> release
 | `make lint` | Run all linters (shellcheck + eclint) |
 | `make clean` | Remove test artifacts and caches |
 | `make list` | List all available Makefile targets |
+
+## Quick Reference Commands
+
+```bash
+# Setup
+npm install                          # Install dev dependencies
+./install-test-shells.sh            # Install test shells (interactive)
+
+# Testing
+make test                           # Run all tests in all shells
+make test-fast                      # Quick test (fast suite in bash)
+make test-bash                      # Test in bash only
+npm run test/fast                   # Fast tests
+npm run test/slow                   # Slow/integration tests
+
+# Code Quality
+make lint                           # Run all linters
+shellcheck -s bash nvm.sh          # Lint specific file
+npm run eclint                      # Check editor config compliance
+./pre-commit-check.sh              # Run pre-commit checks manually
+
+# Cleanup
+make clean                          # Remove test artifacts
+git clean -fdx                      # Nuclear clean (removes everything)
+
+# Documentation
+npm run doctoc                      # Update README table of contents
+```
 
 ## Additional Resources
 

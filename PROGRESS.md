@@ -102,3 +102,22 @@ Investigating the failing test to understand root cause and implement minimal fi
 - **Next**: Add shell installation helper script for test environments
 
 ---
+
+## 2025-10-02 16:20 – feat: add shell installation helper script
+- **Why**: New contributors often struggle with installing multiple test shells; automate this setup
+- **Changes**:
+  - Created install-test-shells.sh with:
+    * OS detection (Ubuntu/Debian, macOS, others)
+    * Automatic shell availability check
+    * Interactive installation for missing shells
+    * Post-install verification
+    * Color-coded output for clarity
+  - Updated DEVELOPMENT.md with:
+    * Reference to installation helper script
+    * Quick reference commands section
+  - Script tested and working on Ubuntu 24.04
+- **Commands**: ./install-test-shells.sh
+- **Result**: One-command shell installation setup. All shells verified working. Quick reference added for common tasks.
+- **Next**: Create troubleshooting guide for common development issues
+
+---
