@@ -10,6 +10,7 @@ test/bak
 .urchin_stdout
 test/**/test_output
 test/**/.nvmrc
+test.*/
 
 node_modules/
 npm-debug.log
@@ -24,3 +25,6 @@ package-lock.json
 yarn.lock
 
 target/
+
+# Autonomous development progress tracking
+PROGRESS.md

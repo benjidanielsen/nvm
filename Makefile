@@ -36,6 +36,31 @@ _no-target-specified:
 list:
 	@$(MAKE) -pRrn : -f $(MAKEFILE_LIST) 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | egrep -v -e '^[^[:alnum:]]' -e '^$@$$' | sort
 
+# Quick test: runs fast test suite only for bash
+.PHONY: test-fast
+test-fast:
+	@$(URCHIN) -f -s bash test/fast
+
+# Lint: runs shellcheck on main shell scripts
+.PHONY: lint
+lint:
+	@echo "Running shellcheck on shell scripts..."
+	@shellcheck -s bash nvm.sh || true
+	@shellcheck -s bash install.sh || true
+	@shellcheck -s bash nvm-exec || true
+	@shellcheck -s bash bash_completion || true
+	@echo "Running eclint..."
+	@npm run eclint
+
+# Clean: removes test artifacts and caches
+.PHONY: clean
+clean:
+	@echo "Cleaning test artifacts..."
+	@rm -rf test/bak .urchin.log .urchin_stdout test/**/test_output
+	@rm -rf v* src alias versions current default-packages
+	@rm -rf test.*/
+	@echo "Clean complete."
+
 # Set of test-<shell> targets; each runs the specified test suites for a single shell.
 # Note that preexisting NVM_* variables are unset to avoid interfering with tests, except when running the Travis tests (where NVM_DIR must be passed in and the env. is assumed to be pristine).
 .PHONY: $(SHELL_TARGETS)
