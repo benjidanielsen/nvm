@@ -55,16 +55,19 @@ nvm is a POSIX-compliant shell script project that works across multiple shells.
    brew install dash
    ```
 
-### Setting Up Pre-commit Checks (Optional)
+### Setting Up Pre-commit Checks (Optional but Recommended)
 
-To automatically validate your changes before committing, you can set up the pre-commit check script:
+To automatically validate your changes before committing, install the pre-commit hook:
 
 ```bash
-# Option 1: Run manually before committing
-./pre-commit-check.sh
+# Easy installation with interactive menu
+./install-git-hooks.sh
 
-# Option 2: Set up as a git pre-commit hook
-ln -s ../../pre-commit-check.sh .git/hooks/pre-commit
+# Or install directly
+./install-git-hooks.sh install
+
+# Or run checks manually before committing
+./pre-commit-check.sh
 ```
 
 The pre-commit script checks:
@@ -286,6 +289,8 @@ make TAG=<version> release
 # Setup
 npm install                          # Install dev dependencies
 ./install-test-shells.sh            # Install test shells (interactive)
+./install-git-hooks.sh              # Install git pre-commit hooks
+./check-version-consistency.sh      # Check version consistency across files
 
 # Testing
 make test                           # Run all tests in all shells

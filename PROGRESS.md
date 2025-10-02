@@ -162,3 +162,23 @@ Investigating the failing test to understand root cause and implement minimal fi
 - **Next**: Add performance testing/benchmarking utilities
 
 ---
+
+## 2025-10-02 16:35 – feat: add version consistency checker and git hooks installer
+- **Why**: Version consistency is critical for releases; git hooks automate quality checks
+- **Changes**:
+  - Created check-version-consistency.sh:
+    * Validates version consistency across nvm.sh, install.sh, README.md, package.json
+    * Color-coded output for easy reading
+    * Helpful error messages with fix suggestions
+  - Created install-git-hooks.sh:
+    * Interactive menu for hook management
+    * Installs pre-commit hooks via symlinks
+    * Supports install/uninstall/list operations
+    * Command-line and interactive modes
+    * Backs up existing hooks
+  - Updated DEVELOPMENT.md with references to both utilities
+- **Commands**: ./check-version-consistency.sh, ./install-git-hooks.sh install
+- **Result**: Version checker validates all files correctly. Git hooks installer working perfectly.
+- **Next**: Session summary and final review
+
+---
