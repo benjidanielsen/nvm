@@ -84,3 +84,21 @@ Investigating the failing test to understand root cause and implement minimal fi
 - **Next**: Add pre-commit validation script to catch common issues early
 
 ---
+
+## 2025-10-02 16:15 – feat: add pre-commit validation script
+- **Why**: Help developers catch common issues before committing (linting, formatting, permissions)
+- **Changes**: 
+  - Created pre-commit-check.sh with checks for:
+    * shellcheck validation on shell scripts
+    * Trailing whitespace detection
+    * Test file executable permissions
+    * Common shell script mistakes (unquoted variables)
+    * Version file consistency
+  - Updated DEVELOPMENT.md with setup instructions
+  - Added Contributing section to README linking to CONTRIBUTING.md and DEVELOPMENT.md
+  - Updated README table of contents
+- **Commands**: ./pre-commit-check.sh, npm run doctoc
+- **Result**: Pre-commit script working perfectly. All checks pass. Contributors now have clear documentation path.
+- **Next**: Add shell installation helper script for test environments
+
+---

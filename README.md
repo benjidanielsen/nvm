@@ -62,6 +62,7 @@
 - [Problems](#problems)
 - [macOS Troubleshooting](#macos-troubleshooting)
 - [WSL Troubleshooting](#wsl-troubleshooting)
+- [Contributing](#contributing)
 - [Maintainers](#maintainers)
 - [Project Support](#project-support)
 - [Enterprise Support](#enterprise-support)
@@ -1149,6 +1150,12 @@ You can check the contents of the file by running:
   ```sh
   cat /etc/resolv.conf
   ```
+
+## Contributing
+
+Contributions are welcome! Please see:
+- [CONTRIBUTING.md](./CONTRIBUTING.md) - Contribution guidelines and standards
+- [DEVELOPMENT.md](./DEVELOPMENT.md) - Development setup and workflow guide
 
 ## Maintainers
 
