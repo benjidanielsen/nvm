@@ -141,3 +141,24 @@ Investigating the failing test to understand root cause and implement minimal fi
 - **Next**: Review CI workflows and document their purpose
 
 ---
+
+## 2025-10-02 16:30 – docs: document GitHub Actions workflows
+- **Why**: CI workflows are complex and undocumented; help contributors understand and maintain them
+- **Changes**:
+  - Created .github/workflows/README.md documenting all 10 workflows:
+    * tests.yml - Main test suite across shells
+    * nvm-install-test.yml - Installation testing
+    * shellcheck.yml - Shell script linting
+    * lint.yml - General linting
+    * toc.yml - README TOC validation
+    * windows-npm.yml - Windows compatibility
+    * latest-npm.yml - Latest npm testing
+    * release.yml - Release automation
+    * rebase.yml - PR rebase automation
+    * require-allow-edits.yml - PR configuration
+  - Included troubleshooting, best practices, debugging tips
+- **Commands**: N/A (documentation only)
+- **Result**: Complete CI/CD workflow documentation for contributors and maintainers.
+- **Next**: Add performance testing/benchmarking utilities
+
+---
