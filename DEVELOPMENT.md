@@ -263,6 +263,7 @@ make TAG=<version> release
 
 ## Getting Help
 
+- Check [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for common development issues
 - Check [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines
 - Review [README.md](./README.md) for user documentation
 - Look at existing tests for examples

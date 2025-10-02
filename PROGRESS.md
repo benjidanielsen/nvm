@@ -121,3 +121,23 @@ Investigating the failing test to understand root cause and implement minimal fi
 - **Next**: Create troubleshooting guide for common development issues
 
 ---
+
+## 2025-10-02 16:25 – docs: create comprehensive troubleshooting guide
+- **Why**: Centralize solutions to common development and testing issues to reduce support burden
+- **Changes**:
+  - Created TROUBLESHOOTING.md covering:
+    * Installation issues (npm, shells, permissions)
+    * Test failures (common causes and solutions)
+    * Shell-specific issues (zsh, dash, ksh compatibility)
+    * Build and lint issues (shellcheck, eclint)
+    * Environment issues (NVM_DIR, PATH conflicts)
+    * CI/CD issues (GitHub Actions, Travis CI)
+    * Performance issues (slow tests)
+    * Debugging tips and techniques
+    * Quick fixes checklist
+  - Updated DEVELOPMENT.md to reference troubleshooting guide
+- **Commands**: N/A (documentation only)
+- **Result**: Comprehensive troubleshooting documentation with practical solutions and examples.
+- **Next**: Review CI workflows and document their purpose
+
+---
