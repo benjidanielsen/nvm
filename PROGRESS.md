@@ -68,3 +68,19 @@ Investigating the failing test to understand root cause and implement minimal fi
 - **Next**: Verify documentation (README table of contents, quickstart guide)
 
 ---
+
+## 2025-10-02 16:09 – docs: create comprehensive DEVELOPMENT.md guide
+- **Why**: No centralized development guide existed; new contributors need quick onboarding
+- **Changes**: Created DEVELOPMENT.md with:
+  - Quick start guide (prerequisites, setup, workflow)
+  - Project structure overview
+  - Testing guidelines and examples
+  - Code style and commit message standards
+  - Common development tasks
+  - Debugging tips
+  - Makefile targets reference
+- **Commands**: N/A (documentation only)
+- **Result**: Complete development guide for contributors. README TOC already up-to-date.
+- **Next**: Add pre-commit validation script to catch common issues early
+
+---
