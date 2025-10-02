@@ -47,3 +47,12 @@ Investigating the failing test to understand root cause and implement minimal fi
 - **Next**: Explore code quality improvements - scan for TODO/FIXME/NOTE tags
 
 ---
+
+## 2025-10-02 16:01 – fix: remove test artifact and improve .gitignore
+- **Why**: Test artifact (test.0.0/) was accidentally committed; add pattern to prevent future similar issues
+- **Changes**: Removed test.0.0/ directory, added test.*/ pattern to .gitignore
+- **Commands**: git rm -r test.0.0/, git status
+- **Result**: Clean repository, test artifacts now properly ignored
+- **Next**: Scan codebase for TODO/FIXME/NOTE comments
+
+---
