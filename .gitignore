@@ -24,3 +24,6 @@ package-lock.json
 yarn.lock
 
 target/
+
+# Autonomous development progress tracking
+PROGRESS.md
